@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../logo.png'
+// import logo from '../logo.png'
 
 const Navbar = () => {
     return (
@@ -7,11 +7,11 @@ const Navbar = () => {
             <nav className="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
                 <div className="container"> 
                     <div className="navbar-brand">
-                        <span className="navbar-logo">
+                        {/* <span className="navbar-logo">
                             <a href="https://mobiri.se">
                                 <img src={logo} alt="Mobirise" style={{height: '3rem'}} />
                             </a>
-                        </span>
+                        </span> */}
                         <span className="navbar-caption-wrap"><a className="navbar-caption text-black display-7" href="https://mobiri.se">Brand Name</a></span>
                     </div>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

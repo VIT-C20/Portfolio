@@ -19,9 +19,9 @@ const Footer = () => {
                                 <strong>Contacts</strong>
                             </h5>
                             <p class="mbr-text mbr-fonts-style mb-4 display-7">
-                                Email: support@mobirise.com <br/>
-                                Phone: +1 (0) 000 0000 001 <br/>
-                                Fax: +1 (0) 000 0000 002
+                                Email: support@gmp-constructions.com <br/>
+                                Phone: +91 000 0000 001 <br/>
+                                Fax: +91 000 0000 002
                             </p>
                         </div>
                         <div class="col-12 col-md-3 mbr-fonts-style display-7">
@@ -30,13 +30,13 @@ const Footer = () => {
                             </h5>
                             <ul class="list mbr-fonts-style mb-4 display-4">
                                 <li class="mbr-text item-wrap">
-                                    <a class="text-primary" href="https://mobirise.co/">Website builder</a>
+                                    <a class="text-primary" href="https://mobirise.co/">Link 1</a>
                                 </li>
                                 <li class="mbr-text item-wrap">
-                                    <a class="text-primary" href="https://mobirise.co/">Download for Windows</a>
+                                    <a class="text-primary" href="https://mobirise.co/">Link 2</a>
                                 </li>
                                 <li class="mbr-text item-wrap">
-                                    <a class="text-primary" href="https://mobirise.co/">Download for Mac</a>
+                                    <a class="text-primary" href="https://mobirise.co/">Link 3</a>
                                 </li>
                             </ul>
                             <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 mt-5 display-7">
@@ -90,7 +90,7 @@ const Footer = () => {
                         </div>
                         <div class="col-sm-12 copyright pl-0">
                             <p class="mbr-text mbr-fonts-style mbr-white display-7">
-                                © Copyright 2025 Mobirise - All Rights Reserved
+                                © Copyright 2021 GMP Constructions - All Rights Reserved
                             </p>
                         </div>
                     </div>
