@@ -23,7 +23,7 @@ const Testimonials = () => {
                                 <div className="carousel-inner">
                                     <div className="carousel-item slider-image item active">
                                         <div className="item-wrapper">
-                                            <img className="d-block w-100" src={background3}/>
+                                            <img className="d-block w-100" src={background3} alt="" />
                                             <div className="carousel-caption d-none d-md-block">
                                                 <h5 className="mbr-section-subtitle mbr-fonts-style display-5">
                                                     <strong>Fixed-Height Slider</strong>
@@ -35,7 +35,7 @@ const Testimonials = () => {
                                     </div>
                                     <div className="carousel-item slider-image item">
                                         <div className="item-wrapper">
-                                            <img className="d-block w-100" src={background5} />
+                                            <img className="d-block w-100" src={background5} alt="" />
                                             <div className="carousel-caption d-none d-md-block">
                                                 <h5 className="mbr-section-subtitle mbr-fonts-style display-5">
                                                     <strong>Fixed-Height Slider</strong>
@@ -47,7 +47,7 @@ const Testimonials = () => {
                                     </div>
                                     <div className="carousel-item slider-image item">
                                         <div className="item-wrapper">
-                                            <img className="d-block w-100" src={background8}/>
+                                            <img className="d-block w-100" src={background8} alt=""/>
                                             <div className="carousel-caption d-none d-md-block">
                                                 <h5 className="mbr-section-subtitle mbr-fonts-style display-5">
                                                     <strong>Fixed-Height Slider</strong>
