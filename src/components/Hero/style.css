@@ -1,0 +1,18 @@
+.video-container {
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url("../../assets/images/hero-background.jpg");
+    background-size: cover;
+}
+
+.hero-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
