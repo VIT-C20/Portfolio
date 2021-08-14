@@ -1758,12 +1758,14 @@ a {
 }
 .cid-sEELpHV0RX .social-list {
   padding-left: 0;
-  margin-bottom: 0;
-  margin-left: -7px;
+  margin: 32px 0;
+  padding: 16px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   list-style: none;
   display: flex;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  -webkit-justify-content: center;
+  justify-content: center;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
