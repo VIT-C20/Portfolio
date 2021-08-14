@@ -32,6 +32,10 @@ const ContactUs = () => {
                                     <div class="col-lg-12 col-md col-12 form-group" data-for="email">
                                         <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control" value="" id="email-form4-10" />
                                     </div>
+                                    <div class="col-12 form-group" data-for="message">
+                                        <input type="text" name="message" placeholder="Message" data-form-field="message" class="form-control" value="" id="message-form4-10" />
+                                        {/* <textarea></textarea> */}
+                                    </div>
                                     <div class="col-12 col-md-auto mbr-section-btn">
                                         <button type="submit" class="btn btn-secondary display-4">Submit</button>
                                     </div>
