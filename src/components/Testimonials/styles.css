@@ -10,11 +10,6 @@
 
 @media (min-width: 992px) {
   .slider-container {
-    padding: 64px;
-    margin-bottom: 64px;
-  }
-
-  .slider-images {
-    max-height: 80vh;
+    padding: 16px 64px;
   }
 }

@@ -16,3 +16,10 @@
     width: 100%;
     object-fit: cover;
 }
+
+.modal-content {
+    height: fit-content;  
+    overflow-y: scroll;
+}
+
+

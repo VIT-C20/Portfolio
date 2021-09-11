@@ -1,57 +1,141 @@
-import React from 'react'
-import sq3 from './sq3.jpg'
+import React from "react";
+import contactUsImage from "./contactUs.jpg";
 
-const ContactUs = () => {
+class ContactUs extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      email: "",
+      message: "",
+    };
+  }
+
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
+  handleSubmit = (event) => {
+    alert(`Hi ${this.state.name}, we will get back to you soon!`);
+    event.preventDefault();
+    this.setState({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+
+  render() {
     return (
-        <div>
-            <section class="form4 cid-sEEHtQxXDk mbr-fullscreen" id="form4-10">
-                <div class="container">
-                    <div class="row content-wrapper justify-content-center">
-                        <div class="col-lg-4 offset-lg-1 mbr-form" data-form-type="formoid">
-                            <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name">
-                                {/* <input type="hidden" name="email" data-form-email="true" value="4t9Whfbj1LE29R2xsQ5UFHpEhaaxk61dmtvtdrMasprpYkDd1HtuVrjPTYcVzuudqJVeNKUyMvqpP2VnsMAtdP0YWKzn1YLm32AtvesIFeIcUY7WABPXvwNzd5Tf5L9+" /> */}
-                                <div class="row">
-                                    <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling
-                                        out the form!</div>
-                                    <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some
-                                        problem!</div>
-                                </div>
-                                <div class="dragArea row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12">
-                                        <h1 class="mbr-section-title mb-4 display-2">
-                                            <strong>Contact Us</strong>
-                                        </h1>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12">
-                                        <p class="mbr-text mbr-fonts-style mb-4 display-7">
-                                            Fill this form and we'll get back to you soon.</p>
-                                    </div>
-                                    <div class="col-lg-12 col-md col-12 form-group" data-for="name">
-                                        <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-form4-10" />
-                                    </div>
-                                    <div class="col-lg-12 col-md col-12 form-group" data-for="email">
-                                        <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control" value="" id="email-form4-10" />
-                                    </div>
-                                    <div class="col-12 form-group" data-for="message">
-                                        <input type="text" name="message" placeholder="Message" data-form-field="message" class="form-control" value="" id="message-form4-10" />
-                                        {/* <textarea></textarea> */}
-                                    </div>
-                                    <div class="col-12 col-md-auto mbr-section-btn">
-                                        <button type="submit" class="btn btn-secondary display-4">Submit</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-lg-6 offset-lg-1 col-12">
-                            <div class="image-wrapper">
-                                <img class="w-100" src={sq3} alt="Mobirise" />
-                            </div>
-                        </div>
+      <div>
+        <section className="form4 cid-sEEHtQxXDk mbr-fullscreen" id="form4-10">
+          <div className="container">
+            <div className="row content-wrapper justify-content-center">
+              <div
+                className="col-lg-4 offset-lg-1 mbr-form"
+                data-form-type="formoid"
+              >
+                <form
+                  action="/"
+                  // method="POST"
+                  className="mbr-form form-with-styler"
+                  data-form-title="Form Name"
+                  onSubmit={this.handleSubmit}
+                >
+                  <div className="row">
+                    <div
+                      hidden="hidden"
+                      data-form-alert=""
+                      className="alert alert-success col-12"
+                    >
+                      Thanks for filling out the form!
                     </div>
+                    <div
+                      hidden="hidden"
+                      data-form-alert-danger=""
+                      className="alert alert-danger col-12"
+                    >
+                      Oops...! some problem!
+                    </div>
+                  </div>
+                  <div className="dragArea row">
+                    <div className="col-lg-12 col-md-12 col-sm-12">
+                      <h1 className="mbr-section-title mb-4 display-2">
+                        <strong>Contact Us</strong>
+                      </h1>
+                    </div>
+                    <div className="col-lg-12 col-md-12 col-sm-12">
+                      <p className="mbr-text mbr-fonts-style mb-4 display-7">
+                        Fill this form and we'll get back to you soon.
+                      </p>
+                    </div>
+                    <div
+                      className="col-lg-12 col-md col-12 form-group"
+                      data-for="name"
+                    >
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Name"
+                        data-form-field="name"
+                        className="form-control"
+                        value={this.state.name}
+                        onChange={this.handleChange}
+                        id="name-form4-10"
+                      />
+                    </div>
+                    <div
+                      className="col-lg-12 col-md col-12 form-group"
+                      data-for="email"
+                    >
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        data-form-field="email"
+                        className="form-control"
+                        value={this.state.email}
+                        onChange={this.handleChange}
+                        id="email-form4-10"
+                      />
+                    </div>
+                    <div className="col-12 form-group" data-for="message">
+                      <input
+                        type="text"
+                        name="message"
+                        placeholder="Message"
+                        data-form-field="message"
+                        className="form-control"
+                        value={this.state.message}
+                        onChange={this.handleChange}
+                        id="message-form4-10"
+                      />
+                    </div>
+                    <div className="col-12 col-md-auto mbr-section-btn">
+                      <button
+                        type="submit"
+                        className="btn btn-secondary display-4"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div className="col-lg-6 offset-lg-1 col-12 d-lg-block d-none">
+                <div className="image-wrapper">
+                  <img
+                    className="w-100"
+                    src={contactUsImage}
+                    alt="Contact us"
+                  />
                 </div>
-            </section>
-        </div>
-    )
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
 }
-
-export default ContactUs
+export default ContactUs;
