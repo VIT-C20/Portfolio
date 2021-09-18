@@ -1,28 +1,12 @@
 import React from "react";
-import background3 from "./background3.jpg";
-import background5 from "./background5.jpg";
-import background8 from "./background8.jpg";
+import background3 from "./Celestia.jpg";
+import background5 from "./Oberoi-realty.jpg";
+import background8 from "./peninsula-business-park.jpg";
 import "./styles.css";
-
-// const testimonialList = [
-//   {
-//     title:"",
-//     imageSrc:"background3"
-//   },
-//   {
-//     title:"",
-//     imageSrc:"background5"
-//   },
-//   {
-//     title:"",
-//     imageSrc:"background8"
-//   }
-// ]
 
 const Testimonials = () => {
   return (
     <section className="slider-container">
-
       <div className="slider-header">
         <h4 className="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
           <strong>Testimonials</strong>
@@ -47,14 +31,25 @@ const Testimonials = () => {
 
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img className="d-block w-100" src={background3} alt="First slide" />
-              <p>Hello</p>
+              <img
+                className="d-block w-100"
+                src={background3}
+                alt="First slide"
+              />
             </div>
             <div className="carousel-item">
-              <img className="d-block w-100" src={background5} alt="Second slide" />
+              <img
+                className="d-block w-100"
+                src={background5}
+                alt="Second slide"
+              />
             </div>
             <div className="carousel-item">
-              <img className="d-block w-100" src={background8} alt="Third slide" />
+              <img
+                className="d-block w-100"
+                src={background8}
+                alt="Third slide"
+              />
             </div>
           </div>
           <a
@@ -63,7 +58,10 @@ const Testimonials = () => {
             role="button"
             data-slide="prev"
           >
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
             <span className="sr-only">Previous</span>
           </a>
           <a
@@ -72,7 +70,10 @@ const Testimonials = () => {
             role="button"
             data-slide="next"
           >
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
             <span className="sr-only">Next</span>
           </a>
         </div>

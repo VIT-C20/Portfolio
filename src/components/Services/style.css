@@ -2,3 +2,8 @@
     border:1px solid #ccc;
     height: 100%;
 }
+
+.services {
+    padding:4rem 0;
+    background-color: #f9f9f9;
+}

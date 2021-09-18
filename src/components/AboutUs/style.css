@@ -1,8 +1,10 @@
 .aboutus-header {
     padding:32px 0;
-    background-color: #F9F9F9;
+    /* background-color: #F9F9F9; */
+    background-color: #fff;
 }
 
 .about-section {
-    background-color: #F9F9F9;
+    /* background-color: #F9F9F9; */
+    background-color: #fff;
 }

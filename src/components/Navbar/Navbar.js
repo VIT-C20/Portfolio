@@ -1,5 +1,8 @@
 import React from "react";
 import "./style.css";
+import logo from "./logo.png";
+
+const companyName = "GP Construction Service";
 
 const Navbar = () => {
   return (
@@ -9,8 +12,9 @@ const Navbar = () => {
           <div className="navbar-brand">
             <span className="navbar-caption-wrap">
               <a className="navbar-caption text-black display-7" href="/">
-                Brand Logo
+                <img src={logo} alt="logo"/>
               </a>
+              <h2 className="mb-0 ml-2 display-2">{companyName}</h2>
             </span>
           </div>
         </div>

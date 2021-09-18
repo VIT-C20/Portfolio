@@ -5,7 +5,6 @@ const Footer = () => {
     <div>
       <section
         className="footer6 cid-sEELpHV0RX"
-        // once="footers"
         id="footer6-12"
         style={{ backgroundColor: "#91ACBC" }}
       >
@@ -38,7 +37,6 @@ const Footer = () => {
                   title="one"
                   frameBorder="0"
                   style={{ border: 0 }}
-                  // src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDk89J4FSunMF33ruMVWJaJht_Ro0kvoXs&amp;q=350 5th Ave, New York, NY 10118"
                   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDk89J4FSunMF33ruMVWJaJht_Ro0kvoXs&amp;q=3Mahalaxmi+SRA+CHS"
                   allowFullScreen=""
                 ></iframe>

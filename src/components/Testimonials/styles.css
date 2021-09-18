@@ -2,10 +2,22 @@
   margin: 32px 0;
 }
 
+.slider-container{
+  background-color: #F9F9F9;
+}
+
 .slider-images {
   padding: 16px;
   margin-bottom: 32px;
   object-fit: cover;
+}
+
+.carousel-inner img {
+  height: 90vh;
+}
+
+.display-2 {
+  font-size: 2rem;
 }
 
 @media (min-width: 992px) {

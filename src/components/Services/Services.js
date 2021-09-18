@@ -27,7 +27,7 @@ const serviceList = [
 
 const Services = () => {
   return (
-    <section className="features3 cid-sEEGvBqWWu" id="features3-w">
+    <section className="features3 cid-sEEGvBqWWu services">
       <div className="container">
         <div className="mbr-section-head">
           <h4 className="mbr-section-title mbr-fonts-style align-center mb-0 display-2">

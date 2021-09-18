@@ -1,5 +1,5 @@
 import React from "react";
-import img1 from "./4.jpg";
+import img1 from "./logo.png";
 import "./style.css";
 
 const AboutUs = () => {
@@ -17,23 +17,22 @@ const AboutUs = () => {
               <div className="image-wrapper">
                 <img src={img1} alt="Mobirise" />
                 <p className="mbr-description mbr-fonts-style pt-2 align-center display-4">
-                  Image Description
+                  GP Construction Service
                 </p>
               </div>
             </div>
             <div className="col-12 col-lg">
-              <div className="text-wrapper">
-                <h3 className="mbr-section-title mbr-fonts-style mb-3 display-5">
-                  <strong>All About GMP</strong>
-                </h3>
-                <p className="mbr-text mbr-fonts-style display-7">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-                  nobis eos at dolore reiciendis sequi veritatis et quaerat
-                  enim, quibusdam recusandae libero illo veniam magnam assumenda
-                  quasi amet voluptas fugiat dolorum est harum animi rerum
-                  delectus eligendi. Officiis temporibus laborum iure provident,
-                  recusandae, alias aspernatur, maxime cumque dolor illo eius.
+              <div className="text-wrapper align-left">
+                <p className="mbr-section-title mbr-fonts-style  display-5">
+                  <strong>Know About G.P.</strong> <small>(Since 1999)</small>
                 </p>
+                
+                <p className="mbr-text mbr-fonts-style display-7"><b>Aim :</b> Satisfying all our clients needs with our services.</p>
+                <p className="mbr-text mbr-fonts-style display-7"><b>Motive :</b> To keep all construction sites debris & Garbage free by using unique methods.</p>
+                <p className="mbr-text mbr-fonts-style display-7"><b>Spirit :</b> We never settle, Always find different methods to work, in order to increase the efficiency of service.</p>
+                <p className="mbr-text mbr-fonts-style display-7"><b>Transparency :</b> Openness with our team & clients which lead to the clarity in communication and better service.</p>
+                <p className="mbr-text mbr-fonts-style display-7"><b>Our Promise :</b> To provide innovative and sustainable service to our clients and bring about a positive environment in business.</p>
+             
               </div>
             </div>
           </div>

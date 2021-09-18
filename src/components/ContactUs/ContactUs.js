@@ -1,5 +1,6 @@
 import React from "react";
 import contactUsImage from "./contactUs.jpg";
+import './style.css';
 
 class ContactUs extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class ContactUs extends React.Component {
   render() {
     return (
       <div>
-        <section className="form4 cid-sEEHtQxXDk mbr-fullscreen" id="form4-10">
+        <section className="form contact-us mbr-fullscreen" >
           <div className="container">
             <div className="row content-wrapper justify-content-center">
               <div
@@ -66,7 +67,7 @@ class ContactUs extends React.Component {
                     </div>
                     <div className="col-lg-12 col-md-12 col-sm-12">
                       <p className="mbr-text mbr-fonts-style mb-4 display-7">
-                        Fill this form and we'll get back to you soon.
+                        Fill your details and we'll get back to you soon.
                       </p>
                     </div>
                     <div

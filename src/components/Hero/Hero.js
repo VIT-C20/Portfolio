@@ -1,6 +1,9 @@
 import React from "react";
 import "./style.css";
-import heroVideo from "../../assets/videos/background-video.mp4";
+import heroVideo from "./bg.mp4";
+
+const companyName = "GP Construction Service"; 
+const tagLine = "We help the best to get better.";
 
 const Hero = () => {
   return (
@@ -17,7 +20,7 @@ const Hero = () => {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title " id="quotationModalLabel">
-                Modal title
+                Quotation Form
               </h5>
               <button
                 type="button"
@@ -32,7 +35,7 @@ const Hero = () => {
               <form>
                 <div className="form-group">
                   <label for="recipient-name" className="col-form-label">
-                    Recipient:
+                    Company Name:
                   </label>
                   <input
                     type="text"
@@ -41,15 +44,38 @@ const Hero = () => {
                   />
                 </div>
 
+                <div className="form-group">
+                  <label for="recipient-name" className="col-form-label">
+                    Company Email address:
+                  </label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="recipient-name"
+                  />
+                </div>
+
                 
 
                 <div class="form-group">
-                  <label for="exampleFormControlSelect1">Start Location</label>
+                  <label for="exampleFormControlSelect1">Site Location</label>
                   <select class="form-control" id="exampleFormControlSelect1">
                     <option>Mumbai</option>
                     <option>Thane</option>
                     <option>Kalyan</option>
+                    <option>Other</option>
                   </select>
+                </div>
+
+                <div className="form-group">
+                  <label for="recipient-name" className="col-form-label">
+                    Other Site location:
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="recipient-name"
+                  />
                 </div>
 
                 <div className="form-group">
@@ -93,18 +119,22 @@ const Hero = () => {
           ></video>
         </div>
 
-        <div className="container">
+        <div className="container-fluid bg-overlay">
+            hello
+          </div>
+
+        <div className="container-fluid content">
           <div className="row">
             <div className="col-12">
-              <h1 className="mbr-section-title mbr-fonts-style mb-3 display-2">
-                <strong>GMP Constructions</strong>
+              <div class="content-bg">
+              <h1 className="mbr-section-title mbr-fonts-style mb-3 display-1">
+                <strong className="company-name">{companyName}</strong>
               </h1>
 
-              <p className="mbr-text mbr-fonts-style display-7">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
-                commodi debitis libero similique quisquam exercitationem,
-                repellendus quaerat fugit eius. Consequatur!
+              <p className="mbr-text mbr-fonts-style display-3">
+                {tagLine}
               </p>
+              </div>
               <div className="mbr-section-btn mt-3">
                 <button
                   type="button"
@@ -120,7 +150,11 @@ const Hero = () => {
               </div>
             </div>
           </div>
+          
         </div>
+
+        
+        
       </section>
     </div>
   );
