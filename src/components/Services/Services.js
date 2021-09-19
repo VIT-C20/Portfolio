@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios'
 import features1 from "./features1.jpg";
 import features2 from "./features2.jpg";
 import features3 from "./features3.jpg";
@@ -26,8 +27,31 @@ const serviceList = [
 ];
 
 const Services = () => {
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    axios.get('https://docs.google.com/spreadsheets/d/1m6mDQO5iokoBoNCUEeY4rS0mOjJwBBijhd1Nzd1OxDE/gviz/tq?tqx=out:json&gid=0')
+    .then(res => {
+      console.log(res.data)
+      const rawData = res.data.split("/O_o/\ngoogle.visualization.Query.setResponse(").pop().split(");")[0]
+      const data  = JSON.parse(rawData)
+      const headers = data.table.cols.map(e => e.label)
+      const rows = data.table.rows
+      const actualData = []
+      rows.forEach(e => {
+        let temp = {}
+        headers.forEach((head, i) => {
+          temp[head] = e.c[i].v
+        })
+        actualData.push(temp)
+      })
+      console.log(actualData)
+    })
+    .catch(err => console.log(err))
+  }, [])
+
   return (
-    <section className="features3 cid-sEEGvBqWWu services">
+    <section className="features3 cid-sEEGvBqWWu services" id="services-container">
       <div className="container">
         <div className="mbr-section-head">
           <h4 className="mbr-section-title mbr-fonts-style align-center mb-0 display-2">

@@ -2,12 +2,12 @@ import React from "react";
 import "./style.css";
 import heroVideo from "./bg.mp4";
 
-const companyName = "GP Construction Service"; 
+const companyName = "GP Construction Service";
 const tagLine = "We help the best to get better.";
 
 const Hero = () => {
   return (
-    <div>
+    <div className="hero-container" id="hero-container">
       <div
         className="modal fade text-left"
         id="quotationModal"
@@ -54,8 +54,6 @@ const Hero = () => {
                     id="recipient-name"
                   />
                 </div>
-
-                
 
                 <div class="form-group">
                   <label for="exampleFormControlSelect1">Site Location</label>
@@ -119,21 +117,17 @@ const Hero = () => {
           ></video>
         </div>
 
-        <div className="container-fluid bg-overlay">
-            hello
-          </div>
+        <div className="container-fluid bg-overlay"></div>
 
         <div className="container-fluid content">
           <div className="row">
             <div className="col-12">
               <div class="content-bg">
-              <h1 className="mbr-section-title mbr-fonts-style mb-3 display-1">
-                <strong className="company-name">{companyName}</strong>
-              </h1>
+                <h1 className="mbr-section-title mbr-fonts-style mb-3 display-1">
+                  <strong className="company-name">{companyName}</strong>
+                </h1>
 
-              <p className="mbr-text mbr-fonts-style display-3">
-                {tagLine}
-              </p>
+                <p className="mbr-text mbr-fonts-style display-3">{tagLine}</p>
               </div>
               <div className="mbr-section-btn mt-3">
                 <button
@@ -150,11 +144,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          
         </div>
-
-        
-        
       </section>
     </div>
   );

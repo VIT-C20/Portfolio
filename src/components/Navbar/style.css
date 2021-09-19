@@ -1,13 +1,27 @@
 .navbar {
-    background: white;
-    background-color: none;
-    box-shadow: 1px 0px 4px 2px #999;
+  background: #fff;
+  background-color: none;
+  box-shadow: 1px 0px 4px 2px #999;
+  padding: 0.5rem 0 !important;
+}
+
+#logo {
+  border-radius: 50%;
 }
 
 .navbar-brand img {
-    height:56px;
+  height: 56px;
 }
 
 .navbar-caption-wrap {
-    align-items: center;
+  align-items: center;
+}
+
+.nav-links {
+  flex-direction: row;
+}
+
+.nav-item {
+  padding-left: 0;
+  padding-right: 0;
 }
