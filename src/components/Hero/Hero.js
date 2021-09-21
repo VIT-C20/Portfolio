@@ -7,7 +7,7 @@ const tagLine = "We help the best to get better.";
 
 const Hero = () => {
   return (
-    <div className="hero-container" id="hero-container">
+    <div id="home">
       <div
         className="modal fade text-left"
         id="quotationModal"
@@ -123,11 +123,11 @@ const Hero = () => {
           <div className="row">
             <div className="col-12">
               <div class="content-bg">
-                <h1 className="mbr-section-title mbr-fonts-style mb-3 display-1">
+                <h1 className="mbr-section-title mbr-fonts-style mb-3">
                   <strong className="company-name">{companyName}</strong>
                 </h1>
 
-                <p className="mbr-text mbr-fonts-style display-3">{tagLine}</p>
+                <p className="mbr-text mbr-fonts-style tag-line ">{tagLine}</p>
               </div>
               <div className="mbr-section-btn mt-3">
                 <button

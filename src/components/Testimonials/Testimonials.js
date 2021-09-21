@@ -1,19 +1,19 @@
 import React from "react";
-import background3 from "./Celestia.jpg";
-import background5 from "./Oberoi-realty.jpg";
-import background8 from "./peninsula-business-park.jpg";
+import background3 from "./images/Celestia.jpg";
+import background5 from "./images/Oberoi-realty.jpg";
+import background8 from "./images/peninsula-business-park.jpg";
 import "./styles.css";
 
 const Testimonials = () => {
   return (
-    <section className="slider-container" id="testimonial-container">
+    <section className="slider-container" id="testimonials">
       <div className="slider-header">
         <h4 className="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
           <strong>Testimonials</strong>
         </h4>
       </div>
 
-      <div className="slider-images">
+      <div className="slider-images container">
         <div
           id="carouselExampleIndicators"
           className="carousel slide"

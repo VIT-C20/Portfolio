@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
-import features1 from "./features1.jpg";
-import features2 from "./features2.jpg";
-import features3 from "./features3.jpg";
+import features1 from "./images/features1.jpg";
+import features2 from "./images/features2.jpg";
+import features3 from "./images/features3.jpg";
 import "./style.css";
 import RenderServiceList from "./RenderServiceList";
 
@@ -65,10 +65,10 @@ const Services = () => {
   
 
   return (
-    <section className="features3 cid-sEEGvBqWWu services" id="services-container">
+    <section className="features3 cid-sEEGvBqWWu services" id="services">
       <div className="container">
-        <div className="mbr-section-head">
-          <h4 className="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+        <div className="row justify-content-center mbr-section-head">
+          <h4 className="mbr-section-title mbr-fonts-style display-2">
             <strong>Services</strong>
           </h4>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import contactUsImage from "./contactUs.jpg";
+import contactUsImage from "./images/contactUs.jpg";
 import './style.css';
 
 class ContactUs extends React.Component {
@@ -28,8 +28,8 @@ class ContactUs extends React.Component {
 
   render() {
     return (
-      <div id="contactus-container">
-        <section className="form contact-us mbr-fullscreen" >
+      <div id="contactus">
+        <section className="form contact-us" >
           <div className="container">
             <div className="row content-wrapper justify-content-center">
               <div

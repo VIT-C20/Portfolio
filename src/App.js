@@ -10,9 +10,10 @@ import Testimonials from './components/Testimonials/Testimonials';
 function App() {
     return (
         <div className="App">
-            <Navbar />
-            <Hero />
-            <Services />
+            <Navbar/>
+            <div id="top"></div>
+            <Hero/>
+            <Services/>
             <AboutUs />
             <Testimonials />
             <ContactUs />

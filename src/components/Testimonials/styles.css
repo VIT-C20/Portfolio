@@ -1,27 +1,26 @@
-.slider-header {
-  margin: 32px 0;
-}
-
 .slider-container{
   background-color: #fff;
 }
 
+.slider-header {
+  padding: 3rem 0 2rem 0;
+}
+
 .slider-images {
-  padding: 16px;
-  margin-bottom: 32px;
+  padding-bottom: 3rem;
   object-fit: cover;
 }
 
 .carousel-inner img {
-  height: 90vh;
+  height: 80vh;
 }
 
 .display-2 {
   font-size: 2rem;
 }
 
-@media (min-width: 992px) {
-  .slider-container {
-    padding: 16px 64px;
+@media (max-width: 576px) {
+  .carousel-inner img {
+    height: 100vw;
   }
 }

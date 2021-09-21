@@ -1,16 +1,16 @@
 import React from "react";
-import img1 from "./logo.png";
+import img1 from "../../assets/images/logo.png";
 import "./style.css";
 
 const AboutUs = () => {
   return (
-    <div id="aboutus-container">
-      <div className="mbr-section-head aboutus-header">
+    <div id="aboutus">
+      <div className="aboutus-header">
         <h4 className="mbr-section-title mbr-fonts-style align-center x mb-0 display-2">
           <strong>About Us</strong>
         </h4>
       </div>
-      <section className="about-section cid-sEEH48RmNz p-0 " id="image1-x">
+      <section className="about-section cid-sEEH48RmNz " id="image1-x">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-12 col-lg-6">

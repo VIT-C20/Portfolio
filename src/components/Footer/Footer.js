@@ -75,7 +75,7 @@ const Footer = () => {
           <div className="footer-lower ">
             <div className="col-sm-12 copyright pl-0">
               <p className="mbr-text mbr-fonts-style mbr-white display-7">
-                © Copyright 2021 GMP Constructions - All Rights Reserved
+                © Copyright 2021 GP Constructions Service - All Rights Reserved
               </p>
             </div>
           </div>
