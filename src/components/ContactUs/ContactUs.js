@@ -1,6 +1,8 @@
 import React from "react";
 import contactUsImage from "./images/contactUs.jpg";
 import './style.css';
+import emailjs from 'emailjs-com';
+import { service_id, user_id, template_id } from '../../mailer'
 
 class ContactUs extends React.Component {
   constructor(props) {
@@ -9,6 +11,8 @@ class ContactUs extends React.Component {
       name: "",
       email: "",
       message: "",
+      success: false,
+      submitted: false
     };
   }
 
@@ -17,13 +21,28 @@ class ContactUs extends React.Component {
   };
 
   handleSubmit = (event) => {
-    alert(`Hi ${this.state.name}, we will get back to you soon!`);
     event.preventDefault();
-    this.setState({
-      name: "",
-      email: "",
-      message: "",
-    });
+    emailjs.send(service_id, template_id, {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+    }, user_id)
+      .then((result) => {
+          console.log(result.text);
+          this.setState({
+            name: "",
+            email: "",
+            message: "",
+            success: true,
+          });
+      }, (error) => {
+          console.log(error.text);
+          this.setState({success: false})
+      })
+      .finally(() => {
+        this.setState({submitted: true})
+      });
+    
   };
 
   render() {
@@ -37,28 +56,32 @@ class ContactUs extends React.Component {
                 data-form-type="formoid"
               >
                 <form
-                  action="/"
+                  // action="/"
                   // method="POST"
                   className="mbr-form form-with-styler"
                   data-form-title="Form Name"
                   onSubmit={this.handleSubmit}
                 >
-                  <div className="row">
-                    <div
-                      hidden="hidden"
-                      data-form-alert=""
-                      className="alert alert-success col-12"
-                    >
-                      Thanks for filling out the form!
+                {
+                  this.state.submitted ? (
+                    <div className="row">
+                      <div
+                        hidden={!this.state.success}
+                        data-form-alert=""
+                        className="alert alert-success col-12"
+                      >
+                        Thanks for filling out the form!
+                      </div>
+                      <div
+                        hidden={this.state.success}
+                        data-form-alert-danger=""
+                        className="alert alert-danger col-12"
+                      >
+                        Oops...! some problem!
+                      </div>
                     </div>
-                    <div
-                      hidden="hidden"
-                      data-form-alert-danger=""
-                      className="alert alert-danger col-12"
-                    >
-                      Oops...! some problem!
-                    </div>
-                  </div>
+                  ) : null
+                }
                   <div className="dragArea row">
                     <div className="col-lg-12 col-md-12 col-sm-12">
                       <h1 className="mbr-section-title mb-4 display-2">
@@ -83,6 +106,7 @@ class ContactUs extends React.Component {
                         value={this.state.name}
                         onChange={this.handleChange}
                         id="name-form4-10"
+                        required
                       />
                     </div>
                     <div
@@ -98,6 +122,7 @@ class ContactUs extends React.Component {
                         value={this.state.email}
                         onChange={this.handleChange}
                         id="email-form4-10"
+                        required
                       />
                     </div>
                     <div className="col-12 form-group" data-for="message">
@@ -110,6 +135,7 @@ class ContactUs extends React.Component {
                         value={this.state.message}
                         onChange={this.handleChange}
                         id="message-form4-10"
+                        required
                       />
                     </div>
                     <div className="col-12 col-md-auto mbr-section-btn">
