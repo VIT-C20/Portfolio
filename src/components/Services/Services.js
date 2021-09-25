@@ -74,7 +74,7 @@ const Services = () => {
         </div>
         <div className="row mt-4">
           {
-            !loading ? <RenderServiceList serviceList={serviceList} /> : <RenderServiceList serviceList={services} />
+            loading ? <RenderServiceList serviceList={serviceList} /> : <RenderServiceList serviceList={services} />
           }
         </div>
       </div>

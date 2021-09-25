@@ -15,9 +15,8 @@ const Footer = () => {
                 <strong>Address</strong>
               </h5>
               <p className="mbr-text mbr-fonts-style display-7">
-                Pandurang Budhkar Marg Mahalaxmi SRA, <br />
-                CHSL I - Wing, <br />
-                Shop No1, Worli, <br />
+                Gopal nagar, 1st lane, office No. 66, <br />
+                P.B. Marg, Worli, <br />
                 Maharashtra 400030, India
               </p>
               <br />
@@ -25,9 +24,8 @@ const Footer = () => {
                 <strong>Contacts</strong>
               </h5>
               <p className="mbr-text mbr-fonts-style mb-4 display-7">
-                Email: support@gmp-constructions.com <br />
-                Phone: +91 000 0000 001 <br />
-                Fax: +91 000 0000 002
+                Email: gppal1631@gmail.com <br />
+                Phone: +91 98217667281 / 8104730872 <br />
               </p>
             </div>
 
