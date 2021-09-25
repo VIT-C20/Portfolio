@@ -1,5 +1,4 @@
 import React from 'react'
-import Services from './Services';
 import "./style.css";
 
 const RenderServiceList = ({ serviceList }) => {
@@ -11,9 +10,9 @@ const RenderServiceList = ({ serviceList }) => {
               <div key={idx} className="item features-image сol-12 col-md-6 col-lg-4">
                 <div className="item-wrapper">
                   <div className="item-img">
-                    <img src={service.Image} alt="" />
+                    <img src={service.Image} alt={service.Service_name} />
                     {
-                      service.Upcoming == 'yes' ? <label class='floating'>Upcoming</label> : null
+                      service.Upcoming?.toLowerCase() === 'yes' ? <label class='floating'>Upcoming</label> : null
                     }
                     
                   </div>

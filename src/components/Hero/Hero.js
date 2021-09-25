@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import heroVideo from "./bg.mp4";
 
@@ -6,6 +6,14 @@ const companyName = "GP Construction Service";
 const tagLine = "We help the best to get better.";
 
 const Hero = () => {
+  const [isOtherSelected, setIsOtherSelected] = useState(false)
+  const handleChangeLocationOnly = (event) => {
+    if(event.target.value.toLowerCase() === 'other') {
+      setIsOtherSelected(true)
+    } else {
+      setIsOtherSelected(false)
+    }
+  }
   return (
     <div id="home">
       <div
@@ -57,23 +65,36 @@ const Hero = () => {
 
                 <div class="form-group">
                   <label for="exampleFormControlSelect1">Site Location</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
+                  <select class="form-control" id="exampleFormControlSelect1" onChange={handleChangeLocationOnly}>
                     <option>Mumbai</option>
                     <option>Thane</option>
                     <option>Kalyan</option>
                     <option>Other</option>
                   </select>
                 </div>
+                
+                {
+                  isOtherSelected ? (
+                    <div className="form-group">
+                      <label for="recipient-name" className="col-form-label">
+                        Other Site location:
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="recipient-name"
+                      />
+                    </div>
+                  ) : null
+                }
 
-                <div className="form-group">
-                  <label for="recipient-name" className="col-form-label">
-                    Other Site location:
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="recipient-name"
-                  />
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Service</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Removal of Debris</option>
+                    <option>Back filling</option>
+                    <option>Hookloader</option>
+                  </select>
                 </div>
 
                 <div className="form-group">
