@@ -1,4 +1,6 @@
 import React from 'react'
+import Services from './Services';
+import "./style.css";
 
 const RenderServiceList = ({ serviceList }) => {
   console.log(serviceList)
@@ -10,6 +12,10 @@ const RenderServiceList = ({ serviceList }) => {
                 <div className="item-wrapper">
                   <div className="item-img">
                     <img src={service.Image} alt="" />
+                    {
+                      service.Upcoming == 'yes' ? <label class='floating'>Upcoming</label> : null
+                    }
+                    
                   </div>
                   <div className="item-content">
                     <h5 className="item-title mbr-fonts-style display-7">
