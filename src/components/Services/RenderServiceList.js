@@ -1,6 +1,11 @@
 import React from 'react'
 import "./style.css";
 import { Modal,ModalManager,Effect} from 'react-dynamic-modal';
+import GetQuotation from '../GetQuotation/GetQuotation';
+
+const openGetQuotationModal = (service) => {
+    ModalManager.open(<GetQuotation service={service.Service_name} onRequestClose={() => true}/>);
+  }
 
 const ServiceDetails = ({service, onRequestClose}) => {
   return (
@@ -44,7 +49,7 @@ const ServiceDetails = ({service, onRequestClose}) => {
                 </div>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-primary" onClick={() => {ModalManager.close()}}>
+              <button type="button" className="btn btn-primary" onClick={() => {ModalManager.close(); openGetQuotationModal(service)}}>
                 Get Quotation
               </button>
               <button
@@ -66,6 +71,7 @@ const RenderServiceList = ({ serviceList }) => {
   const openModal = (service) =>{
       ModalManager.open(<ServiceDetails service={service} onRequestClose={() => true}/>);
     }
+
   return (
       <>
           {serviceList.map((service,idx) => {

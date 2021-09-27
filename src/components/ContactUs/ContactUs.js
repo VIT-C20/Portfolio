@@ -2,7 +2,8 @@ import React from "react";
 import contactUsImage from "./images/contactUs.jpg";
 import './style.css';
 import emailjs from 'emailjs-com';
-import { service_id, user_id, template_id } from '../../mailer'
+import { service_id, user_id, contact_us_template_id } from '../../mailer'
+import Loader from "react-loader-spinner"
 
 class ContactUs extends React.Component {
   constructor(props) {
@@ -12,7 +13,8 @@ class ContactUs extends React.Component {
       email: "",
       message: "",
       success: false,
-      submitted: false
+      submitted: false,
+      loading: false
     };
   }
 
@@ -22,7 +24,8 @@ class ContactUs extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    emailjs.send(service_id, template_id, {
+    this.setState({loading: true})
+    emailjs.send(service_id, contact_us_template_id, {
       name: this.state.name,
       email: this.state.email,
       message: this.state.message
@@ -40,7 +43,7 @@ class ContactUs extends React.Component {
           this.setState({success: false})
       })
       .finally(() => {
-        this.setState({submitted: true})
+        this.setState({submitted: true, loading: false})
       });
     
   };
@@ -141,9 +144,10 @@ class ContactUs extends React.Component {
                     <div className="col-12 col-md-auto mbr-section-btn">
                       <button
                         type="submit"
+                        disabled={this.state.loading}
                         className="btn btn-secondary display-4"
                       >
-                        Submit
+                        {this.state.loading ? <Loader type="ThreeDots" color="#FFF" height={30} width={30}/> : 'Submit'}
                       </button>
                     </div>
                   </div>
