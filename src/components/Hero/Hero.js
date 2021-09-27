@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./style.css";
 import heroVideo from "./bg.mp4";
 import GetQuotation from "../GetQuotation/GetQuotation";
 import { ModalManager} from 'react-dynamic-modal';
+import { ServicesContext } from "../../ServicesContext";
 
 const companyName = "GP Construction Service";
 const tagLine = "We help the best to get better.";
 
 const Hero = () => {
+    const {services, loading} = useContext(ServicesContext)
 
   const openModal = () => {
-      ModalManager.open(<GetQuotation onRequestClose={() => true}/>);
+      ModalManager.open(<GetQuotation listOfServices={services} loading={loading} onRequestClose={() => true}/>);
   }
 
   return (

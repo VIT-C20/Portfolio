@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import axios from 'axios'
+import React, { useContext } from "react";
 import features1 from "./images/features1.jpg";
 import features2 from "./images/features2.jpg";
 import features3 from "./images/features3.jpg";
 import "./style.css";
 import RenderServiceList from "./RenderServiceList";
+import { ServicesContext } from "../../ServicesContext";
 
 const serviceList = [
   {
@@ -31,38 +31,8 @@ const serviceList = [
 ];
 
 const Services = () => {
-  const [loading, setLoading] = useState(true)
-  const [services, setServices] = useState([])
 
-  useEffect(() => {
-    axios.get('https://docs.google.com/spreadsheets/d/1m6mDQO5iokoBoNCUEeY4rS0mOjJwBBijhd1Nzd1OxDE/gviz/tq?tqx=out:json&gid=0')
-    .then(res => {
-      const rawData = res.data.split("/*O_o*/\ngoogle.visualization.Query.setResponse(").pop().split(");")[0]
-      const data  = JSON.parse(rawData)
-      console.log(data)
-      // const headers = data.table.cols.map(e => e.label)
-      const rows = data.table.rows
-      console.log(rows)
-      const headers = [rows[0].c[0].v, rows[0].c[1].v, rows[0].c[2].v, rows[0].c[3].v]
-      const actualData = []
-      rows.forEach((e, idx) => {
-        if(idx !== 0) {
-          let temp = {}
-          headers.forEach((head, i) => {
-            temp[head] = e.c[i].v
-          })
-          actualData.push(temp)
-        }
-      })
-      console.log(actualData)
-      if (actualData.length > 0) {
-        setLoading(false)
-        setServices(actualData)
-      }
-    })
-    .catch(err => console.log(err))
-  }, [])
-  
+  const {services, loading} = useContext(ServicesContext)
 
   return (
     <section className="features3 cid-sEEGvBqWWu services" id="services">

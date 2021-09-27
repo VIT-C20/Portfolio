@@ -3,8 +3,10 @@ import "./style.css";
 import { Modal,ModalManager,Effect} from 'react-dynamic-modal';
 import GetQuotation from '../GetQuotation/GetQuotation';
 
+var listOfServices = []
+
 const openGetQuotationModal = (service) => {
-    ModalManager.open(<GetQuotation service={service.Service_name} onRequestClose={() => true}/>);
+    ModalManager.open(<GetQuotation listOfServices={listOfServices} service={service.Service_name} onRequestClose={() => true}/>);
   }
 
 const ServiceDetails = ({service, onRequestClose}) => {
@@ -62,12 +64,12 @@ const ServiceDetails = ({service, onRequestClose}) => {
             </div>
           </div>
         </div>
-      {/* <h1>{service.Service_name}</h1>
-      <button onClick={ModalManager.close}>Close Modal</button> */}
     </Modal>
   )
 }
+
 const RenderServiceList = ({ serviceList }) => {
+  listOfServices = [...serviceList]
   const openModal = (service) =>{
       ModalManager.open(<ServiceDetails service={service} onRequestClose={() => true}/>);
     }

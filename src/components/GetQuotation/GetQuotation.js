@@ -4,7 +4,7 @@ import Loader from "react-loader-spinner"
 import emailjs from 'emailjs-com';
 import { service_id, user_id, get_quotation_template_id } from '../../mailer'
 
-const GetQuotation = ({service, onRequestClose}) => {
+const GetQuotation = ({service, onRequestClose, listOfServices, loading : load = false}) => {
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
     const [submitted, setSubmitted] = useState(false)
@@ -147,9 +147,16 @@ const GetQuotation = ({service, onRequestClose}) => {
                         <label for="exampleFormControlSelect1">Service</label>
                         <select class="form-control" id="exampleFormControlSelect1" defaultValue={service} onChange={e => setServiceName(e.target.value)} required >
                             <option value="" disabled selected hidden>Select Service</option>
-                            <option>Removal of Debris</option>
-                            <option>Back filling</option>
-                            <option>Hookloader</option>
+                            {
+                                listOfServices?.map(service => (<option>{service.Service_name}</option>))
+                            }
+                            {
+                                load ? 
+                                (
+                                    <><option>Removal of Debris</option>
+                                <option>Back filling</option>
+                                <option>Hookloader</option></>): null
+                            }
                         </select>
                         </div>
 
