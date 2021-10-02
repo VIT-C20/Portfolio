@@ -38,3 +38,11 @@
 .service-modal-description {
     padding:0.5rem 1rem;
 }
+
+.service-modal {
+    width: 100%;
+}
+
+.modal-container {
+    width: 100%;
+}

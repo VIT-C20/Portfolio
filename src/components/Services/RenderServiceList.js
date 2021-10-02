@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 import { Modal, ModalManager, Effect } from "react-dynamic-modal";
 import GetQuotation from "../GetQuotation/GetQuotation";
+// import Radium, { StyleRoot } from 'radium';
 
 var listOfServices = [];
 
@@ -23,15 +24,17 @@ const ServiceDetails = ({ service, onRequestClose }) => {
       className="modal-dialog"
       style={{
         overlay: {
+          overflowX: "hidden",
           overflowY: "auto",
         },
         content: {
-          margin: "1% auto",
+          margin: "2% auto",
           borderRadius: "1%",
-        },
+          width: (window.innerWidth <= 760) ? '90%' : '70%'
+        },     
       }}
     >
-      <div role="document">
+      <div className="modal-container" role="document">
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title " id="serviceDetailsModalLabel">
@@ -56,10 +59,10 @@ const ServiceDetails = ({ service, onRequestClose }) => {
               </p>
             </div>
           </div>
-          <div className="modal-footer">
+          <div className="row modal-footer">
             <button
               type="button"
-              className="btn btn-primary"
+              className="btn btn-sm btn-md btn-primary"
               onClick={() => {
                 ModalManager.close();
                 openGetQuotationModal(service);
@@ -69,7 +72,7 @@ const ServiceDetails = ({ service, onRequestClose }) => {
             </button>
             <button
               type="button"
-              className="btn btn-secondary"
+              className="btn btn-sm btn-md btn-secondary"
               onClick={ModalManager.close}
             >
               Close
@@ -85,6 +88,7 @@ const RenderServiceList = ({ serviceList }) => {
   listOfServices = [...serviceList];
   const openModal = (service) => {
     ModalManager.open(
+      
       <ServiceDetails service={service} onRequestClose={() => true} />
     );
   };
@@ -107,7 +111,7 @@ const RenderServiceList = ({ serviceList }) => {
                   height={"100"}
                 />
                 {service.Upcoming?.toLowerCase() === "yes" ? (
-                  <label class="floating">Upcoming</label>
+                  <label className="floating">Upcoming</label>
                 ) : null}
               </div>
               <div className="item-content p-3">

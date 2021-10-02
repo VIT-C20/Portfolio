@@ -1,7 +1,7 @@
 import React from "react";
-import background3 from "./images/Celestia.jpg";
-import background5 from "./images/Oberoi-realty.jpg";
-import background8 from "./images/peninsula-business-park.jpg";
+import background1 from "./images/Celestia.jpg";
+import background2 from "./images/Oberoi-realty.jpg";
+import background3 from "./images/peninsula-business-park.jpg";
 import "./styles.css";
 
 const Testimonials = () => {
@@ -30,26 +30,40 @@ const Testimonials = () => {
           </ol>
 
           <div className="carousel-inner">
-            <div className="carousel-item active">
+            <div className="carousel-item slider-image item active">
+              
+                <img className="d-block w-100" src={background1} alt="" />
+                <div className="carousel-caption ">
+                  <p className="mbr-section-text mbr-fonts-style display-7">
+                  <strong>Celestia</strong>
+                  </p>
+                </div>
+              
+            </div>
+
+            <div className="carousel-item">
+              <img
+                className="d-block w-100"
+                src={background2}
+                alt="Second slide"
+              />
+              <div className="carousel-caption ">
+                  <p className="mbr-section-text mbr-fonts-style display-7">
+                  <strong>Oberoi Realty</strong>
+                  </p>
+                </div>
+            </div>
+            <div className="carousel-item">
               <img
                 className="d-block w-100"
                 src={background3}
-                alt="First slide"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                className="d-block w-100"
-                src={background5}
-                alt="Second slide"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                className="d-block w-100"
-                src={background8}
                 alt="Third slide"
               />
+              <div className="carousel-caption ">
+                  <p className="mbr-section-text mbr-fonts-style display-7">
+                  <strong>Peninsula Business Park</strong>
+                  </p>
+                </div>
             </div>
           </div>
           <a

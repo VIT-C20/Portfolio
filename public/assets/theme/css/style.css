@@ -801,13 +801,10 @@ form .row [class*=col] {
 
 form .mbr-section-btn {
   margin: 0;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
 }
 
 form .btn {
   display: flex;
-  padding: 0.6rem 1.2rem;
   margin: 0;
 }
 
@@ -827,6 +824,8 @@ textarea.form-control {
 form .btn {
   min-height: 48px;
 }
+
+
 
 .gdpr-block label span.textGDPR input[name=gdpr] {
   top: 7px;

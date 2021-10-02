@@ -8,7 +8,10 @@ const ContextProvider = ({children}) => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        axios.get('https://docs.google.com/spreadsheets/d/1m6mDQO5iokoBoNCUEeY4rS0mOjJwBBijhd1Nzd1OxDE/gviz/tq?tqx=out')
+        // reference sheet
+        // axios.get('https://docs.google.com/spreadsheets/d/1m6mDQO5iokoBoNCUEeY4rS0mOjJwBBijhd1Nzd1OxDE/gviz/tq?tqx=out')
+        
+        axios.get('https://docs.google.com/spreadsheets/d/13OM9PEXxyNS89uL0HLaPHOTvIbpKBJTa7sn7BAaJmwQ/gviz/tq?tqx=out')
         .then(res => {
             const rawData = res.data.split("/*O_o*/\ngoogle.visualization.Query.setResponse(").pop().split(");")[0]
             const data  = JSON.parse(rawData)

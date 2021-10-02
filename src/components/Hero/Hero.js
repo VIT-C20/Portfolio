@@ -37,7 +37,7 @@ const Hero = () => {
         <div className="container-fluid content">
           <div className="row">
             <div className="col-12">
-              <div class="content-bg">
+              <div className="content-bg">
                 <h1 className="mbr-section-title mbr-fonts-style mb-3">
                   <strong className="company-name">{companyName}</strong>
                 </h1>
