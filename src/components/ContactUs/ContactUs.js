@@ -145,9 +145,10 @@ class ContactUs extends React.Component {
                       <button
                         type="submit"
                         disabled={this.state.loading}
+                        id="submit-btn"
                         className="btn btn-secondary display-4"
                       >
-                        {this.state.loading ? <Loader type="ThreeDots" color="#FFF" height={30} width={30}/> : 'Submit'}
+                        {this.state.loading ? <Loader type="ThreeDots" color="#FFF" height={30} width={40}/> : 'Submit'}
                       </button>
                     </div>
                   </div>

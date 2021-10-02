@@ -44,3 +44,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+.btn {
+  padding: 0.5rem 1rem;
+  min-width: 6rem;
+}
