@@ -23,9 +23,9 @@ const serviceList = [
     },
   {
     Image: features3,
-    Service_name: "Service C",
+    Service_name: "Hookloader",
     Service_description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Officiis veniam distinctio et maxime aperiam facere nemonesciunt accusantium. Ullam, omnis.",
+      "High tech system for debris removal from construction site.This is the cheapest method of debris removal that has been adopted in Mumbai by G.P. Enterprises.",
     upcoming: true
   },
 ];
