@@ -3,6 +3,7 @@ import { Modal, ModalManager, Effect } from "react-dynamic-modal";
 import Loader from "react-loader-spinner";
 import emailjs from "emailjs-com";
 import { service_id, user_id, get_quotation_template_id } from "../../mailer";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const GetQuotation = ({
   service,
@@ -19,18 +20,18 @@ const GetQuotation = ({
   const [serviceName, setServiceName] = useState(service);
   const [message, setMessage] = useState("");
   const [otherSiteLocation, setOtherSiteLocation] = useState("");
+  const { width } = useWindowDimensions()
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log(
-      companyName,
-      companyEmail,
-      siteLocation,
-      serviceName,
-      message,
-      otherSiteLocation
-    );
+    // console.log(
+    //   companyName,
+    //   companyEmail,
+    //   siteLocation,
+    //   serviceName,
+    //   message,
+    //   otherSiteLocation
+    // );
     setLoading(true);
     emailjs.send(service_id, get_quotation_template_id, {
         companyName, companyEmail, siteLocation, serviceName, message, otherSiteLocation
@@ -55,12 +56,13 @@ const GetQuotation = ({
       className="modal-dialog"
       style={{
         overlay: {
+          overflowX: "hidden",
           overflowY: "auto",
         },
         content: {
           margin: "2% auto",
           borderRadius: "1%",
-          width: window.innerWidth <= 760 ? "90%" : "70%",
+          width: width <= 760 ? "90%" : "50%",
         },
       }}
     >
@@ -198,28 +200,28 @@ const GetQuotation = ({
                   required
                 ></textarea>
               </div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-secondary mr-1"
+                  data-dismiss="modal"
+                  onClick={ModalManager.close}
+                >
+                  Close
+                </button>
+                <button
+                  type="submit"
+                  className="btn btn-primary ml-1"
+                  // onClick={handleSubmit}
+                >
+                  {loading ? (
+                    <Loader type="ThreeDots" color="#FFF" height={30} width={30} />
+                  ) : (
+                    "Submit"
+                  )}
+                </button>
+              </div>
             </form>
-          </div>
-          <div className="modal-footer">
-            <button
-              type="button"
-              className="btn btn-secondary"
-              data-dismiss="modal"
-              onClick={ModalManager.close}
-            >
-              Close
-            </button>
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={handleSubmit}
-            >
-              {loading ? (
-                <Loader type="ThreeDots" color="#FFF" height={30} width={30} />
-              ) : (
-                "Submit"
-              )}
-            </button>
           </div>
         </div>
       </div>

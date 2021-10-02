@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import { Modal, ModalManager, Effect } from "react-dynamic-modal";
 import GetQuotation from "../GetQuotation/GetQuotation";
-// import Radium, { StyleRoot } from 'radium';
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 var listOfServices = [];
 
@@ -17,6 +17,7 @@ const openGetQuotationModal = (service) => {
 };
 
 const ServiceDetails = ({ service, onRequestClose }) => {
+  const { width } = useWindowDimensions()
   return (
     <Modal
       onRequestClose={onRequestClose}
@@ -30,7 +31,8 @@ const ServiceDetails = ({ service, onRequestClose }) => {
         content: {
           margin: "2% auto",
           borderRadius: "1%",
-          width: (window.innerWidth <= 760) ? '90%' : '70%'
+          width: (width <= 760) ? '90%' : '50%',
+          overflow: 'hidden',
         },     
       }}
     >
@@ -54,7 +56,7 @@ const ServiceDetails = ({ service, onRequestClose }) => {
               <div className="item-img">
                 <img src={service.Image} alt={service.Service_name} />
               </div>
-              <p className="mbr-text mbr-fonts-style p-3 m-0 text-justify display-7" dangerouslySetInnerHTML={{__html: service.Service_description}}>
+              <p className="mbr-text mbr-fonts-style p-3 m-0 text-justify-left display-7" dangerouslySetInnerHTML={{__html: service.Service_description}}>
                 {/* {service.Service_description} */}
               </p>
             </div>
