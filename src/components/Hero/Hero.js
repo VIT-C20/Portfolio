@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "./style.css";
-import heroVideo from "./bg.mp4";
 import GetQuotation from "../GetQuotation/GetQuotation";
 import { ModalManager} from 'react-dynamic-modal';
 import { ServicesContext } from "../../ServicesContext";
@@ -24,7 +23,7 @@ const Hero = () => {
       >
         <div className="video-container">
           <video
-            src={heroVideo}
+            src={'video/bg.mp4'}
             className="hero-video"
             loop
             autoPlay

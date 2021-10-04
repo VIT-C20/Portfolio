@@ -1,28 +1,25 @@
 import React, { useContext } from "react";
-import features1 from "./images/features1.jpg";
-import features2 from "./images/features2.jpg";
-import features3 from "./images/features3.jpg";
 import "./style.css";
 import RenderServiceList from "./RenderServiceList";
 import { ServicesContext } from "../../ServicesContext";
 
 const serviceList = [
   {
-    Image: features1,
+    Image: 'images/features1.jpg',
     Service_name: "Removal of Debris",
     Service_description:
       `Our company provides two types of debris removal services. Hook loader, which is used by U.S.A, and Traditional method which is currently an ongoing method.`,
     upcoming: false,
     },
   {
-    Image: features2,
+    Image: 'images/features2.jpg',
     Service_name: "Back filling",
     Service_description:
       `This is our free service on construction sites. Company provides soil for construction sites without any cost. The capacity of company providing soil on construction sites is 1900 cubic meter per day.`,
     upcoming: false
     },
   {
-    Image: features3,
+    Image: 'images/features3.jpg',
     Service_name: "Hookloader",
     Service_description:
       "High tech system for debris removal from construction site.This is the cheapest method of debris removal that has been adopted in Mumbai by G.P. Enterprises.",

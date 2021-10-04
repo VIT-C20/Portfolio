@@ -1,5 +1,4 @@
 import React from "react";
-import contactUsImage from "./images/contactUs.jpg";
 import './style.css';
 import emailjs from 'emailjs-com';
 import { service_id, user_id, contact_us_template_id } from '../../mailer'
@@ -158,7 +157,7 @@ class ContactUs extends React.Component {
                 <div className="image-wrapper">
                   <img
                     className="w-100"
-                    src={contactUsImage}
+                    src={'images/contactUs.jpg'}
                     alt="Contact us"
                   />
                 </div>

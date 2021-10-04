@@ -6,7 +6,7 @@
   top: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: url("../../assets/images/hero-background.jpg");
+  background-image: url("./hero-background.jpg");
   background-size: cover;
 }
 

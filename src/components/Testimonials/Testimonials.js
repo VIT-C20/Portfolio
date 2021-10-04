@@ -1,7 +1,4 @@
 import React from "react";
-import background1 from "./images/Celestia.jpg";
-import background2 from "./images/Oberoi-realty.jpg";
-import background3 from "./images/peninsula-business-park.jpg";
 import "./styles.css";
 
 const Testimonials = () => {
@@ -32,7 +29,7 @@ const Testimonials = () => {
           <div className="carousel-inner">
             <div className="carousel-item slider-image item active">
               
-                <img className="d-block w-100" src={background1} alt="" />
+                <img className="d-block w-100" src={'images/Celestia.jpg'} alt="Celestia" />
                 <div className="carousel-caption ">
                   <p className="mbr-section-text mbr-fonts-style display-7">
                   <strong>Celestia</strong>
@@ -44,8 +41,8 @@ const Testimonials = () => {
             <div className="carousel-item">
               <img
                 className="d-block w-100"
-                src={background2}
-                alt="Second slide"
+                src={'/images/Oberoi-realty.jpg'}
+                alt="Oberoi-realty"
               />
               <div className="carousel-caption ">
                   <p className="mbr-section-text mbr-fonts-style display-7">
@@ -56,8 +53,8 @@ const Testimonials = () => {
             <div className="carousel-item">
               <img
                 className="d-block w-100"
-                src={background3}
-                alt="Third slide"
+                src={'images/peninsula-business-park.jpg'}
+                alt="peninsula-business-park"
               />
               <div className="carousel-caption ">
                   <p className="mbr-section-text mbr-fonts-style display-7">

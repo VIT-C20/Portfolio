@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import logo from "../../assets/images/logo.png";
+// import logo from "../../images/logo.png";
 
 const Navbar = () => {
   return (
@@ -10,7 +10,7 @@ const Navbar = () => {
           <div className="navbar-brand">
             <span className="navbar-caption-wrap">
               <a className="navbar-caption text-black" href="/">
-                <img id="logo" src={logo} alt="logo" />
+                <img id="logo" src={'images/logo.png'} alt="logo" height={20} width={20} />
               </a>
             </span>
           </div>

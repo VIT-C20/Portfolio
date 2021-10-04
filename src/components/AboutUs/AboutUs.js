@@ -1,5 +1,4 @@
 import React from "react";
-import img1 from "../../assets/images/logo.png";
 import "./style.css";
 
 const AboutUs = () => {
@@ -15,7 +14,7 @@ const AboutUs = () => {
           <div className="row align-items-center">
             <div className="col-12 col-lg-6">
               <div className="image-wrapper d-lg-block d-none">
-                <img src={img1} alt="logo" />
+                <img src={'images/logo.png'} alt="GP Construction Services logo" />
                 <p className="mbr-description mbr-fonts-style pt-2 align-center display-4">
                   GP Construction Service
                 </p>
