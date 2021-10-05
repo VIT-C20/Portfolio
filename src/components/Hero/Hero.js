@@ -23,7 +23,7 @@ const Hero = () => {
       >
         <div className="video-container">
           <video
-            src={'video/bg.mp4'}
+            src={'video/bg2.mp4'}
             className="hero-video"
             loop
             autoPlay
