@@ -3,6 +3,7 @@ import "./style.css";
 import GetQuotation from "../GetQuotation/GetQuotation";
 import { ModalManager} from 'react-dynamic-modal';
 import { ServicesContext } from "../../ServicesContext";
+import bgVideo  from './bg2.mp4'
 
 const companyName = "GP Construction Service";
 const tagLine = "We help the best to get better.";
@@ -23,7 +24,8 @@ const Hero = () => {
       >
         <div className="video-container">
           <video
-            src={'video/bg2.mp4'}
+            // src={'video/bg2.mp4'}
+            src={bgVideo}
             className="hero-video"
             loop
             autoPlay

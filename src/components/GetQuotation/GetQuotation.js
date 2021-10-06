@@ -202,16 +202,8 @@ const GetQuotation = ({
               </div>
               <div className="modal-footer">
                 <button
-                  type="button"
-                  className="btn btn-secondary mr-1"
-                  data-dismiss="modal"
-                  onClick={ModalManager.close}
-                >
-                  Close
-                </button>
-                <button
                   type="submit"
-                  className="btn btn-primary ml-1"
+                  className="btn btn-primary m-1"
                   // onClick={handleSubmit}
                 >
                   {loading ? (
@@ -219,6 +211,14 @@ const GetQuotation = ({
                   ) : (
                     "Submit"
                   )}
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-secondary m-1"
+                  data-dismiss="modal"
+                  onClick={ModalManager.close}
+                >
+                  Close
                 </button>
               </div>
             </form>
