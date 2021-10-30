@@ -14,22 +14,32 @@ import { ContextProvider } from './ServicesContext';
 //   document.getElementById('root')
 // );
 
-import { hydrate, render } from "react-dom";
+// import { hydrate, render } from "react-dom";
 
-const rootElement = document.getElementById("root");
-if (rootElement.hasChildNodes()) {
-  hydrate(<React.StrictMode>
+// const rootElement = document.getElementById("root");
+// if (rootElement.hasChildNodes()) {
+//   hydrate(<React.StrictMode>
+//     <ContextProvider>
+//       <App />
+//     </ContextProvider>
+//   </React.StrictMode>, rootElement);
+// } else {
+  // render(<React.StrictMode>
+  //   <ContextProvider>
+  //     <App />
+  //   </ContextProvider>
+  // </React.StrictMode>, rootElement);
+// }
+
+import { render } from 'react-snapshot';
+render(
+    <React.StrictMode>
     <ContextProvider>
       <App />
     </ContextProvider>
-  </React.StrictMode>, rootElement);
-} else {
-  render(<React.StrictMode>
-    <ContextProvider>
-      <App />
-    </ContextProvider>
-  </React.StrictMode>, rootElement);
-}
+  </React.StrictMode>,
+    document.getElementById('root')
+  );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
