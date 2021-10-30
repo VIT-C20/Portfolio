@@ -8,6 +8,16 @@ import { ServicesContext } from "../../ServicesContext";
 const companyName = "G.P. Enterprises";
 const tagLine = "We help the best to get better.";
 
+const makeMuted = elt => {
+  // console.log(elt.readyState)
+  if(elt) {
+    elt.muted = true
+  }
+  // if(elt.readyState > 4) {
+  //   elt.play()
+  // }
+}
+
 const Hero = () => {
     const {services, loading} = useContext(ServicesContext)
 
@@ -30,7 +40,9 @@ const Hero = () => {
             className="hero-video"
             loop
             autoPlay
-            muted
+            // muted
+            playsInline
+            ref={makeMuted}
           ></video>
         </div>
 
