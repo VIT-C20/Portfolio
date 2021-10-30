@@ -24,8 +24,9 @@ const Hero = () => {
       >
         <div className="video-container">
           <video
-            src={'video/bg2.mp4'}
+            // src={'video/bg2.mp4'}
             // src={bgVideo}
+            src={'https://i.imgur.com/PYXblvl.mp4'}
             className="hero-video"
             loop
             autoPlay
