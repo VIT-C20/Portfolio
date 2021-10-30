@@ -19,7 +19,7 @@ const GetQuotation = ({
   const [siteLocation, setSiteLocation] = useState("");
   const [serviceName, setServiceName] = useState(service);
   const [message, setMessage] = useState("");
-  const [otherSiteLocation, setOtherSiteLocation] = useState("");
+  // const [otherSiteLocation, setOtherSiteLocation] = useState("");
   const { width } = useWindowDimensions()
 
   const handleSubmit = (e) => {
@@ -30,11 +30,12 @@ const GetQuotation = ({
     //   siteLocation,
     //   serviceName,
     //   message,
-    //   otherSiteLocation
+    //   // otherSiteLocation
     // );
     setLoading(true);
     emailjs.send(service_id, get_quotation_template_id, {
-        companyName, companyEmail, siteLocation, serviceName, message, otherSiteLocation
+        companyName, companyEmail, siteLocation, serviceName, message
+        // , otherSiteLocation
     }, user_id)
     .then((result) => {
         console.log(result.text);
@@ -128,7 +129,7 @@ const GetQuotation = ({
                 />
               </div>
 
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label htmlFor="exampleFormControlSelect1">Site Location</label>
                 <select
                   className="form-control"
@@ -145,22 +146,22 @@ const GetQuotation = ({
                   <option value="Kalyan">Kalyan</option>
                   <option value="Other">Other</option>
                 </select>
-              </div>
+              </div> */}
 
-              {siteLocation.toLocaleLowerCase() === "other" ? (
+              {/* {siteLocation.toLocaleLowerCase() === "other" ? ( */}
                 <div className="form-group">
                   <label htmlFor="recipient-name" className="col-form-label">
-                    Other Site location:
+                    Site location:
                   </label>
                   <input
                     type="text"
                     className="form-control"
                     id="recipient-name"
-                    onChange={(e) => setOtherSiteLocation(e.target.value)}
+                    onChange={(e) => setSiteLocation(e.target.value)}
                     required
                   />
                 </div>
-              ) : null}
+              {/* ) : null} */}
 
               <div className="form-group">
                 <label htmlFor="exampleFormControlSelect1">Service</label>

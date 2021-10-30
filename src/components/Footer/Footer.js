@@ -43,39 +43,39 @@ const Footer = () => {
           </div>
           <div className="col-12 p-0">
             <div className="social-list">
-              <div className="soc-item">
+              {/* <div className="soc-item">
                 <a href="/">
                   <span className="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
                 </a>
-              </div>
+              </div> */}
               <div className="soc-item">
-                <a href="https://www.facebook.com/pages/Mobirise/1616226671953247">
+                <a href="https://m.facebook.com/GP-Enterprises-104114571975160/?tsid=0.5817103782334094&source=result" target='_blank' rel="noopener noreferrer">
                   <span className="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
                 </a>
               </div>
               <div className="soc-item">
-                <a href="/">
-                  <span className="socicon-youtube socicon mbr-iconfont mbr-iconfont-social"></span>
+                <a href="https://www.linkedin.com/company/g-p-enterprisess" target='_blank' rel="noopener noreferrer">
+                  <span className="socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
                 </a>
               </div>
-              <div className="soc-item">
+              {/* <div className="soc-item">
                 <a href="/">
                   <span className="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
                 </a>
-              </div>
+              </div> */}
               <div className="soc-item">
-                <a href="/">
+                <a href="mailto:gppal1631@gmail.com" target='_blank' rel="noopener noreferrer">
                   <span className="socicon-googleplus socicon mbr-iconfont mbr-iconfont-social"></span>
                 </a>
               </div>
             </div>
           </div>
           <div className="footer-lower ">
-            <div className="col-sm-12 copyright pl-0">
+            {/* <div className="col-sm-12 copyright pl-0">
               <p className="mbr-text mbr-fonts-style mbr-white display-7">
                 © Copyright 2021 GP Constructions Service - All Rights Reserved
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

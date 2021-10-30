@@ -3,9 +3,9 @@ import "./style.css";
 import GetQuotation from "../GetQuotation/GetQuotation";
 import { ModalManager} from 'react-dynamic-modal';
 import { ServicesContext } from "../../ServicesContext";
-import bgVideo  from './bg2.mp4'
+// import bgVideo  from './bg2.mp4'
 
-const companyName = "GP Construction Service";
+const companyName = "G.P. Enterprises";
 const tagLine = "We help the best to get better.";
 
 const Hero = () => {
@@ -24,8 +24,8 @@ const Hero = () => {
       >
         <div className="video-container">
           <video
-            // src={'video/bg2.mp4'}
-            src={bgVideo}
+            src={'video/bg2.mp4'}
+            // src={bgVideo}
             className="hero-video"
             loop
             autoPlay
@@ -53,7 +53,7 @@ const Hero = () => {
                 >
                   Get Quotation
                 </button>
-                <a className="btn btn-success display-4" href="/">
+                <a className="btn btn-success display-4" href="https://youtu.be/V5kmYl4SR5M" target='_blank' rel="noopener noreferrer" >
                   Check Demo
                 </a>
               </div>
