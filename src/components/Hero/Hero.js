@@ -8,15 +8,15 @@ import { ServicesContext } from "../../ServicesContext";
 const companyName = "G.P. Enterprises";
 const tagLine = "We help the best to get better.";
 
-const makeMuted = elt => {
-  // console.log(elt.readyState)
-  if(elt) {
-    elt.muted = true
-  }
-  // if(elt.readyState > 4) {
-  //   elt.play()
-  // }
-}
+// const makeMuted = elt => {
+//   // console.log(elt.readyState)
+//   if(elt) {
+//     elt.muted = true
+//   }
+//   // if(elt.readyState > 4) {
+//   //   elt.play()
+//   // }
+// }
 
 const Hero = () => {
     const {services, loading} = useContext(ServicesContext)
@@ -24,6 +24,16 @@ const Hero = () => {
   const openModal = () => {
       ModalManager.open(<GetQuotation listOfServices={services} loading={loading} onRequestClose={() => true}/>);
   }
+
+  const makeMuted = elt => {
+    if(elt) {
+    console.log(elt.readyState)
+    elt.muted = true
+  }
+  // if(elt.readyState > 4) {
+  //   elt.play()
+  // }
+}
 
   return (
     <div id="home">
@@ -34,9 +44,9 @@ const Hero = () => {
       >
         <div className="video-container">
           <video
-            // src={'video/bg2.mp4'}
+            src={'video/bg3.mp4'}
             // src={bgVideo}
-            src={'https://i.imgur.com/PYXblvl.mp4'}
+            // src={'https://i.imgur.com/PYXblvl.mp4'}
             className="hero-video"
             loop
             autoPlay
