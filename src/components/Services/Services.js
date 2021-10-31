@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./style.css";
 import RenderServiceList from "./RenderServiceList";
 import { ServicesContext } from "../../ServicesContext";
+import { Helmet } from "react-helmet";
 
 const serviceList = [
   {
@@ -33,6 +34,10 @@ const Services = () => {
 
   return (
     <section className="features3 cid-sEEGvBqWWu services" id="services">
+      <Helmet>
+        <meta name="description" content={`List of services provided by G.P. Enterprises : ${serviceList.map(service => service.Service_name)}`} />
+        <meta name="keywords" content={`${serviceList.map(service => service.Service_name)}, Celestia, Oberoi Realty, Peninsula Business Park`} />
+      </Helmet>
       <div className="container">
         <div className="row justify-content-center mbr-section-head">
           <h4 className="mbr-section-title mbr-fonts-style display-2">

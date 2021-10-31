@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import './App.css';
 import AboutUs from './components/AboutUs/AboutUs';
 import ContactUs from './components/ContactUs/ContactUs';
@@ -10,6 +11,9 @@ import Testimonials from './components/Testimonials/Testimonials';
 function App() {
     return (
         <div className="App">
+            <Helmet>
+                <title>G.P. Enterprises</title>
+            </Helmet>
             <Navbar/>
             <div id="top"></div>
             <Hero/>

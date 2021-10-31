@@ -3,6 +3,7 @@ import "./style.css";
 import { Modal, ModalManager, Effect } from "react-dynamic-modal";
 import GetQuotation from "../GetQuotation/GetQuotation";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
+import { Helmet } from "react-helmet";
 
 var listOfServices = [];
 
@@ -37,6 +38,10 @@ const ServiceDetails = ({ service, onRequestClose }) => {
       }}
     >
       <div className="modal-container" role="document">
+        <Helmet>
+          <title>G.P. Enterprises | {service.Service_name}</title>
+          <meta name="description" content={service.Service_description}></meta>
+        </Helmet>
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title " id="serviceDetailsModalLabel">
