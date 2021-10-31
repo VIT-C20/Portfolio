@@ -102,6 +102,11 @@ const RenderServiceList = ({ serviceList }) => {
 
   return (
     <>
+      <Helmet>
+        <meta name="description" content={serviceList.map(service => {
+          return ` ${service.Service_name}: ${service.Service_description} `
+        })} />
+      </Helmet>
       {serviceList.map((service, idx) => {
         return (
           <div
